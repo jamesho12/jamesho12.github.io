@@ -1,1 +1,376 @@
-(This will become my personal homepage)
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Playground</title>
+  
+  
+  
+  
+      <style>
+        * {
+  box-sizing: border-box;
+  /*border: 1px solid red;*/
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: grid;    
+}
+
+@media all and (min-width: 1200px) {
+  body{
+    font-size: 18px;
+    /*background-color:lightgreen;*/
+  }
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;} 
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  .auto-clear .col-1:nth-child(12n+1){clear:left;}
+  .auto-clear .col-2:nth-child(6n+1){clear:left;}
+  .auto-clear .col-3:nth-child(4n+1){clear:left;}
+  .auto-clear .col-4:nth-child(3n+1){clear:left;}
+  .auto-clear .col-6:nth-child(odd){clear:left;}   
+}
+ 
+@media all and (max-width: 1199px) and (min-width: 992px) {
+  body{
+    font-size: 16px;
+    /*background-color:lightyellow;*/
+  }
+  .col-m-1 {width: 8.33%;}
+  .col-m-2 {width: 16.66%;}
+  .col-m-3 {width: 25%;}
+  .col-m-4 {width: 33.33%;}
+  .col-m-5 {width: 41.66%;}
+  .col-m-6 {width: 50%;}
+  .col-m-7 {width: 58.33%;}
+  .col-m-8 {width: 66.66%;}
+  .col-m-9 {width: 75%;}
+  .col-m-10 {width: 83.33%;}
+  .col-m-11 {width: 91.66%;}
+  .col-m-12 {width: 100%;}
+  .auto-clear .col-m-1:nth-child(12n+1){clear:left;}
+  .auto-clear .col-m-2:nth-child(6n+1){clear:left;}
+  .auto-clear .col-m-3:nth-child(4n+1){clear:left;}
+  .auto-clear .col-m-4:nth-child(3n+1){clear:left;}
+  .auto-clear .col-m-6:nth-child(odd){clear:left;}
+}
+ 
+@media all and (max-width: 991px) and (min-width: 0px) {
+  body{
+    font-size: 12px;
+    /*background-color:lightblue; */
+  }  
+  .hide-s {display:none;}  
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;} 
+  .auto-clear .col-s-1:nth-child(12n+1){clear:left;}
+  .auto-clear .col-s-2:nth-child(6n+1){clear:left;}
+  .auto-clear .col-s-3:nth-child(4n+1){clear:left;}
+  .auto-clear .col-s-4:nth-child(3n+1){clear:left;}
+  .auto-clear .col-s-6:nth-child(odd){clear:left;}    
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.logo-right {
+  text-align: right;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;  
+}
+
+.img-center {
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  background: #E01257;
+  height: 50px;
+}
+
+.nav-container {
+  display: block;
+  width: 100%;  
+  height: 50px;
+  font-family: 'Lora', sans-serif;  
+  clear: both;
+}
+
+.nav-container a {  
+  text-decoration: none;  
+  color: white;  
+}
+
+.nav-header {
+  float: left;
+  height: 50px;
+  padding: 10px;
+  font-size: 2.1em;
+}
+
+.menu-wrapper {
+  float: right;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+
+.menu {
+  width: 40px;
+  height: 40px;
+  padding: 0 8px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.menu-icon {
+  width: 22px;
+  height: 2px;
+  margin: 8px 0;
+  background-color: white;    
+}
+
+@media all and (max-width: 992px) {
+  .nav-expanded {
+    display: block;
+  }
+}
+
+.menu-items {
+  background: #E76C95;  
+  display: none;
+}
+
+.menu-items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-items li {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+
+.menu-items li a {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 1.4em;
+  color: white;
+  text-decoration: none;
+}
+
+@media all and (min-width: 1200px) { 
+  nav {
+    width: 100%;
+    padding: 0 10% 0 10%;
+  }
+  
+  .nav-container {
+    display: inline-block;
+    position: absolute;
+    width: 80%;
+    z-index: 1200;
+  }
+  
+  .nav-header {
+    font-size: 1.5em;
+  }  
+  
+  .menu-wrapper {
+    display: none;
+  }
+  
+  .menu-items { 
+    float: right;
+    display: block;
+    position: relative;
+    background: transparent;
+    z-index: 2400;
+  }
+  
+  .menu-items ul {
+    float: right;
+  }
+  
+  .menu-items li {
+    display: inline-block;
+    width: auto;    
+    height: 50px;
+  }
+  
+  .menu-items li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-size: 1em;
+  }
+}
+
+.temp-content {
+  height: 2000px;
+  background: gray;
+}
+
+section {
+  height: 2000px;
+}
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+
+  <head>   
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/> 
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+</head>
+
+<body id="page-top">
+  <nav>
+    <div class="nav-container">
+      <a class ="nav-header" href="#page-top">James Ho</a>
+
+      <div class="menu-wrapper">
+        <div class="menu">
+          <div class="menu-icon"></div>
+          <div class="menu-icon"></div>
+          <div class="menu-icon"></div>
+        </div>                     
+      </div>            
+    </div>
+    <div class="menu-items">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>        
+    </div>      
+  </nav>
+    
+  <div class="temp-content">
+    
+  </div>
+  
+  <section>
+    <div id="about">
+      This is my about section
+    </div>  
+  </section>
+  <section>    
+    <div id="skills">
+      This is my about section
+    </div>  
+  </section>
+  <section>
+    <div id="resume">
+      This is my resume section
+    </div>      
+  </section>
+  <section>
+    <div id="contact">
+      This is my about section
+    </div>  
+  </section>
+  
+  
+  
+</body>
+    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
+
+  
+
+    <script >
+      $(document).ready(function() {
+  $(".menu").click(function() {
+    $(".menu-items").slideToggle(400, function() {
+
+    });
+  });
+});
+      //# sourceURL=pen.js
+    </script>
+
+
+
+  
+  
+
+</body>
+
+</html>
+ 

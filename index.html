@@ -266,12 +266,12 @@ nav {
 }
 
 .temp-content {
-  height: 2000px;
+  height: 100vh;
   background: gray;
 }
 
 section {
-  height: 2000px;
+  height: 100vh;
 }
     </style>
 
@@ -300,7 +300,7 @@ section {
 <body id="page-top">
   <nav>
     <div class="nav-container">
-      <a class ="nav-header" href="#page-top">James Ho</a>
+      <a class="nav-header" href="#page-top">James Ho</a>
 
       <div class="menu-wrapper">
         <div class="menu">
@@ -331,7 +331,7 @@ section {
   </section>
   <section>    
     <div id="skills">
-      This is my about section
+      This is my skills section
     </div>  
   </section>
   <section>
@@ -360,7 +360,27 @@ section {
     $(".menu-items").slideToggle(400, function() {
 
     });
-  });
+  });  
+  
+  $(".nav-header, .menu-items a").click(function(event){ 
+    event.preventDefault();
+    var o =  $( $(this).attr("href") ).offset();   
+    var sT = o.top - $(".nav-container").outerHeight(true); // get the fixedbar height
+    // compute the correct offset and scroll to it.
+    if(window.screen.width < 992)
+      $(".menu-items").slideUp(400).delay(800);
+    
+    if(this.className === "nav-header") {
+      $('html,body').animate({
+        scrollTop: sT
+      });
+      return;
+    } 
+    
+    $('html,body').animate({
+      scrollTop: sT
+    });
+  });  
 });
       //# sourceURL=pen.js
     </script>

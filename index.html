@@ -260,6 +260,17 @@ nav {
   padding: 80px 0;
 }
 
+.resume-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.resume-icon {
+  height: 150px;
+  width: auto;
+}
+
 .odd-container {
   background: #E01257;
   color: white;
@@ -302,8 +313,6 @@ textarea {
   height: auto;
 }
 
-
-
 #submit-form {
   display: flex;
   align-items: center;
@@ -325,9 +334,9 @@ textarea {
 }
 
 #submit:hover {
-  background-color: #d1d1d1;
-  border: 2px inset #d1d1d1;
-  color: #E01257;
+  background-color: lightgray;
+  border: 2px inset lightgray;
+  color: #E34378;
   font-size: 2.0em;
   height: auto;
   padding: 0 15px;
@@ -397,15 +406,15 @@ textarea {
 @media all and (max-width: 1199px) and (min-width: 992px) {
   nav { padding: 0 5%; }
   .nav-container { width: 90%; }
-  .nav-header { font-size: 1.75em; }
-  .container { width:90%; }
+  .container { padding: 80px 5%; }  
+  .nav-header { font-size: 1.75em; }  
   #submit { font-size: 1.5em; }
 }
 
 @media all and (min-width: 1200px) {
-  nav { padding: 0 10%; }
-  .nav-container { width: 80%; }
-  .container { padding: 80px 10%; }  
+  nav { padding: 0 20%; }
+  .nav-container { width: 60%; }
+  .container { padding: 80px 20%; }  
   #submit { font-size: 1.5em; }
   .profile { height: 50vh; width: 50vh; }
 }
@@ -481,7 +490,9 @@ textarea {
     <div class="container">
       <h1>Resume</h1>    
       <hr>
-      <div style="height:100px;width:100px;border:1px solid black;margin:0 auto;display:flex;align-items:center;justify-content:center;">Filler</div>
+      <div class="resume-container">
+        <a href="https://www.dropbox.com/s/xua01bssc7wrndk/james_ho_resume.pdf?raw=1"><img class="resume-icon" src="https://cdn3.iconfinder.com/data/icons/other-icons/48/paper_document-512.png" alt="Document Icon"></a>
+      </div>      
       <p>You can find a copy of my resume here! (Updated: January 7th, 2018)</p
     </div>       
   </section>

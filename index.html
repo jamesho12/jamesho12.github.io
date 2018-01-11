@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
   <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
   <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
-  <title>CodePen - Playground</title>
+  <title>CodePen - Personal Webpage</title>
   
   
   
@@ -189,15 +189,15 @@ nav {
   background-color: white;    
 }
 
+.menu-items {
+  background: #FA6F6F;  
+  display: none;
+}
+
 @media all and (max-width: 767px) {
   .nav-expanded {
     display: block;
   }
-}
-
-.menu-items {
-  background: #FA6F6F;  
-  display: none;
 }
 
 .menu-items ul {
@@ -582,18 +582,20 @@ textarea {
       <div class="row" id="contact-wrapper">
         <div class="col-s-6 col-6" id="name-form">
           <label for="name">Name *</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name">
         </div>
         <div class="col-s-6 col-6" id="email-form">
           <label for="name">Email *</label>
-          <input type="text" id="email" name="email" required>                
+          <input type="text" id="email" name="email">                
         </div>
         <div class="col-s-12 col-12" id="message-form">
           <label for="name">Message *</label>
-          <textarea rows="10" id="message"></textarea required>
+          <textarea rows="10" id="message"></textarea>
         </div>
         <div class="col-s-12 col-12" id="submit-form">
-          <button type="button" id="submit">Send</button>
+          <a href="#!">
+            <button type="button" id="submit">Send</button>
+          </a>
         </div>
       </div>
       
@@ -611,7 +613,7 @@ textarea {
       $(document).ready(function() {
   $(".menu").click(function() {
     $(".menu-items").slideToggle(400, function() {
-
+      $(".menu-items").toggleClass("nav-expanded").css("display","");
     });
   });  
   
@@ -634,6 +636,33 @@ textarea {
       scrollTop: sT
     });
   });  
+  
+  function ValidateEmail()   
+  {  
+   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(document.getElementById("email").value))
+    {  
+      return true;  
+    }  
+      alert("You have entered an invalid email address!")  
+      return false;
+  }  
+  
+  $("#submit-form a").click(function(event){ 
+    event.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+        
+    if(name && email && message) {
+      if(ValidateEmail()) {
+        var body = "Name: " + name + "%0D%0AEmail: " + email + "%0D%0A%0D%0AMessage: " + message;
+        window.location.href = "mailto:jamesho.AHS@gmail.com?subject=Message James!&body=" + body;
+      }
+    } else {
+      alert("Please Fill All Required Field");            
+    }    
+  });
 });
       //# sourceURL=pen.js
     </script>

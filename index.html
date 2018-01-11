@@ -446,6 +446,8 @@ textarea {
   hr {
     width: 100%;
   }
+  
+  .profile { height: 50vh; width: 50vh; }
 }
 
 @media all and (max-width: 1199px) and (min-width: 992px) {
@@ -461,7 +463,21 @@ textarea {
   .nav-container { width: 60%; }
   .container { padding: 80px 20%; }  
   #submit { font-size: 1.5em; }
-  .profile { height: 50vh; width: 50vh; }
+}
+
+@media all and (max-height: 400px) and (min-width: 768px) {
+  .temp-content { 
+    min-height: 400px;
+  }
+  
+  .profile {
+    min-height: 200px; min-width: 200px;
+  }
+}
+
+@media all and (max-height: 600px) and (max-width: 767px) {
+  .temp-content { min-height: 400px; }
+  .profile { min-height: 200px; min-width: 200px; }
 }
     </style>
 

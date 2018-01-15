@@ -5,14 +5,13 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <title>James Ho</title>
+<meta charset="UTF-8">
   
   
+
   
-  
-      <style>
-        * {
+<style>
+* {
   box-sizing: border-box;
   /*border: 1px solid red;*/
 }
@@ -139,7 +138,7 @@ body {
 nav {
   width: 100%;
   position: fixed;
-  background: #D30E3B;
+  background: #A11039;
   height: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 1000;
@@ -188,7 +187,8 @@ nav {
 }
 
 .menu-items {
-  background: #FA6F6F;  
+  background: #A11039;  
+  opacity: .8;
   display: none;
 }
 
@@ -214,7 +214,8 @@ nav {
 
 @media all and (max-width: 767px) {
   .menu-items li {
-    border-bottom: 1px solid #D30E3B;
+    border-bottom: 1px solid #FFF;
+    opacity: .8;
   }
   
   .menu-items li:last-child {
@@ -283,7 +284,7 @@ nav {
 }
 
 .odd-container {
-  background: #D30E3B;
+  background: #A11039;
   color: white;
 }
 
@@ -300,15 +301,15 @@ nav {
   padding: 10px 10px 10px 10%;    
 }
 
-.skills-list li:before {
-  content: "";
-  display: inline-block;
-  height: 25px;
-  width: 25px;
+.regular-icon {
+  fill: black;
+}
+.alt-icon {
+  fill: white;
+}
+
+svg {
   padding-right: 10px;
-  background-image: url("https://www.dropbox.com/s/9z9bxjd5n28rxgk/bulletpoint2.png?raw=1");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .checkmark {
@@ -388,7 +389,7 @@ textarea {
 #submit:hover {
   background-color: lightgray;
   border: 2px inset lightgray;
-  color: #E34378;
+  color: #A11039;
   font-size: 2.0em;
   height: auto;
   padding: 0 15px;
@@ -500,7 +501,8 @@ textarea {
 
   <head>   
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/> 
-  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
+  <title>James Ho</title>
 </head>
 
 <body id="page-top">
@@ -543,18 +545,25 @@ textarea {
   </section>
   
   <section id="skills">    
-    <div class="container odd-container">
+    <div class="container">
       <h1>Skills</h1>    
       <hr>
       <ul class="skills-list">
         <li>HTML</li>
         <li>CSS</li>
         <li>Javascript</li>
+        <li>JQuery</li>        
         <li>C</li>
         <li>Java</li>
         <li>Python</li>
-        <li>MySQL</li>   
-        <li>SQLite</li>
+        <li>SQL</li>   
+        <li>JSON</li>
+        <li>.NET Framework</li>  
+        <li>Android Studio</li>   
+        <li>Swift</li>  
+        <li>Linux</li>   
+        <li>GitHub</li>  
+    
       </ul>
     </div>   
   </section>
@@ -571,7 +580,7 @@ textarea {
   </section>
   
   <section id="contact">
-    <div class="container odd-container">
+    <div class="container">
       
       <h1>Contact me</h1>   
       <hr>
@@ -634,6 +643,21 @@ textarea {
       scrollTop: sT
     });
   });  
+  
+  var i=0;
+  $('section').each(function(i) {
+    if(i%2 === 1) {
+      console.log(this);
+      $(this).addClass("odd-container");
+      if($(this).attr("id") === "skills")
+        $(this).addClass("alt-icon");
+    }      
+  });
+  
+  $(".skills-list li").each(function() {
+    console.log(this);
+    $(this).prepend('<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 0 1792 1792" width="35"><path d="M1299 813l-422 422q-19 19-45 19t-45-19l-294-294q-19-19-19-45t19-45l102-102q19-19 45-19t45 19l147 147 275-275q19-19 45-19t45 19l102 102q19 19 19 45t-19 45zm141 83q0-148-73-273t-198-198-273-73-273 73-198 198-73 273 73 273 198 198 273 73 273-73 198-198 73-273zm224 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/></svg>');
+  });
   
   function ValidateEmail()   
   {  

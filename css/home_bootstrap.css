@@ -1,3 +1,7 @@
+nav, .profile-wrapper, h1, p, li, h2, label, button {
+  font-family: 'Lora', sans-serif;  
+}
+
 .myContainer {
  background: #007bff;
  color: white;
@@ -12,7 +16,8 @@ nav .container {
 }
 
 .container {
-   padding: 80px 0;
+   padding-top: 80px;
+   padding-bottom: 80px;
 }
 
 .temp-content {
@@ -46,6 +51,10 @@ nav .container {
   object-position: 0 0;
 }
 
+@media all and (min-width: 768px) {
+  .profile { height: 50vh; width: 50vh; }
+}
+
 @media all and (max-height: 400px) and (min-width: 768px) {
   .temp-content { min-height: 400px; }  
   .profile { min-height: 134px; min-width: 134px; }
@@ -56,12 +65,10 @@ nav .container {
   .profile { min-height: 200px; min-width: 200px; }
 }
 
-h1 {
-   margin-bottom: .67em;
-}
-
 hr {
    border-color: inherit;
+   margin-top: 1.67rem;
+   margin-bottom: 1.335rem;
 }
 
 h2 {
@@ -88,3 +95,22 @@ h2 {
 .list-group-item {
    border: 1px solid white;
 }
+
+.form-control:focus, button:hover {
+  outline: none;
+  box-shadow: 0 0 3pt 2pt white;
+}
+
+#submit {
+  padding: 15px;  
+}
+
+.btn-default {
+  color: #d1d1d1;  
+}
+
+#submit button:hover {
+  background-color: lightgray;  
+  color: #007bff;  
+}
+

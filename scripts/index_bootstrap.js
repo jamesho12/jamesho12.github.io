@@ -13,4 +13,24 @@ $("section").each(function(i) {
   }  
 });
 
+$(".navbar-brand, .navbar-nav a").click(function(event){ 
+ event.preventDefault();
+ var o =  $( $(this).attr("href") ).offset();   
+ var sT = o.top - $("#myNav").outerHeight(true); // get the fixedbar height
+ // compute the correct offset and scroll to it.
+ if(window.screen.width < 992)
+   $(".navbar-nav").slideUp(400).delay(800);
+ 
+ if(this.className === "navbar-brand") {
+   $('html,body').animate({
+     scrollTop: sT
+   });
+   return;
+ } 
+ 
+ $('html,body').animate({
+   scrollTop: sT + 1
+ });
+});  
+
 $(".list-group li").addClass("list-group-item bg-primary");

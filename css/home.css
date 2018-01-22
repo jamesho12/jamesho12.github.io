@@ -1,8 +1,12 @@
+nav, .profile-wrapper, h1, p, li, h2, label, button {
+  font-family: 'Lora', sans-serif;  
+}
+
 nav {
   width: 100%;
   position: fixed;
   background: #A11039;
-  height: 50px;
+  height: 50px;  
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 1000;
 }
@@ -10,8 +14,7 @@ nav {
 .nav-container {
   display: block;
   width: 100%;  
-  height: 50px;
-  font-family: 'Lora', sans-serif;  
+  height: 50px;  
   clear: both;
 }
 
@@ -116,14 +119,12 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;  
-  margin-top: 50px;  
+  margin-top: 50px;    
   font-size: 3em;
   color: white;
 }
 
-.profile-wrapper * {
-  padding: 5px;
-}
+.profile-wrapper * { padding: 5px; }
 
 .profile {
   height: 33.33vh;
@@ -144,9 +145,7 @@ nav {
   .profile { min-height: 200px; min-width: 200px; }
 }
 
-.container {
-  padding: 80px 0;
-}
+.container { padding: 80px 0; }
 
 .odd-container {
   background: #A11039;
@@ -166,21 +165,10 @@ nav {
   padding: 10px 10px 10px 10%;    
 }
 
-.regular-icon {
-  fill: black;
-}
-.alt-icon {
-  fill: white;
-}
+.alt-icon { fill: white; }
 
-svg {
+li svg {
   padding-right: 10px;
-}
-
-.checkmark {
-  height: 25px;
-  width: auto;
-  
 }
 
 h2 {
@@ -189,18 +177,17 @@ h2 {
   text-align: center;
 }
 
-#portfolio a {
-  display: inline-block;
-}
+#portfolio a { display: inline-block; }
 
-.apo-icon {
+.apo-icon, .apozo-icon{
   margin: 21.765px 0;
-  width: 150px;
   padding: 15px;
   border-radius: 10px;
-  background-color: navy;
+  background-color: #0033AB;
 }
 
+.apo-icon { width: 150px; }
+.apozo-icon { height: 150px; }
 
 .resume-icon {
   height: 150px;
@@ -236,12 +223,16 @@ input, textarea {
   height: 40px;
   width: 100%;
   border-radius: 10px;
-  border: 2px inset white;  
   padding: 10px;
 }
 
 textarea {
   height: auto;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 3pt 2pt #3261CF;
 }
 
 #submit-form {
@@ -252,25 +243,25 @@ textarea {
 }
 
 #submit {
-  font-family: 'Lora', sans-serif;  
   font-size: 1.8em;
   color: #d1d1d1;
   height: 40px;
-  width: auto;
-  border: 2px inset white;
+  width: auto;  
   border-radius: 5px;
   background: white;  
   transition-duration: 0.4s; 
   padding: 0 15px;
 }
 
+input, textarea, #submit {
+  border: 2px inset white;
+}
+
 #submit:hover {
   background-color: lightgray;
   border: 2px inset lightgray;
-  color: #A11039;
-  font-size: 2.0em;
-  height: auto;
-  padding: 0 15px;
+  color: #A11039;  
+  box-shadow: 0 0 3pt 2pt #3261CF;
 }
 
 #submit:focus {

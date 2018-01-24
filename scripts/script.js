@@ -10,7 +10,7 @@
     var o =  $( $(this).attr("href") ).offset();   
     var sT = o.top - $(".nav-container").outerHeight(true); // get the fixedbar height
     // compute the correct offset and scroll to it.
-    if(window.screen.width < 992)
+    if(window.screen.width < 768)
       $(".menu-items").slideUp(400).delay(800);
     
     if(this.className === "nav-header") {

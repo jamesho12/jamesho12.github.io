@@ -3,10 +3,6 @@ body {
    padding: 0;
 }
 
-body, .logo-container, footer {
-  min-width: 749px;
-}
-
 nav {
   font-family: 'Josefin Sans', sans-serif;  
   font-weight: 300;

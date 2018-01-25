@@ -85,7 +85,7 @@ nav a {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background: url(../images/crossing-photo.jpg) no-repeat center center fixed;
+  background: url(../images/crossing-photo.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;

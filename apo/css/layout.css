@@ -12,7 +12,7 @@
 .row::after {
     content: "";
     clear: both;
-    display: grid;    
+    display: grid;
 }
 
 @media all and (min-width: 1200px) {
@@ -26,7 +26,7 @@
   .col-4 {width: 33.33%;}
   .col-5 {width: 41.66%;}
   .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;} 
+  .col-7 {width: 58.33%;}
   .col-8 {width: 66.66%;}
   .col-9 {width: 75%;}
   .col-10 {width: 83.33%;}
@@ -36,9 +36,9 @@
   .auto-clear .col-2:nth-child(6n+1){clear:left;}
   .auto-clear .col-3:nth-child(4n+1){clear:left;}
   .auto-clear .col-4:nth-child(3n+1){clear:left;}
-  .auto-clear .col-6:nth-child(odd){clear:left;}   
+  .auto-clear .col-6:nth-child(odd){clear:left;}
 }
- 
+
 @media all and (max-width: 1199px) and (min-width: 992px) {
   body{
     font-size: 16px;
@@ -62,13 +62,13 @@
   .auto-clear .col-m-4:nth-child(3n+1){clear:left;}
   .auto-clear .col-m-6:nth-child(odd){clear:left;}
 }
- 
+
 @media all and (max-width: 991px) and (min-width: 0px) {
   body{
     font-size: 12px;
     /*background-color:lightblue; */
-  }  
-  .hide-s {display:none;}  
+  }
+  .hide-s {display:none;}
   .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
   .col-s-3 {width: 25%;}
@@ -80,7 +80,7 @@
   .col-s-9 {width: 75%;}
   .col-s-10 {width: 83.33%;}
   .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;} 
+  .col-s-12 {width: 100%;}
   [class*="col-"] {
     padding: 10px;
   }
@@ -88,7 +88,7 @@
   .auto-clear .col-s-2:nth-child(6n+1){clear:left;}
   .auto-clear .col-s-3:nth-child(4n+1){clear:left;}
   .auto-clear .col-s-4:nth-child(3n+1){clear:left;}
-  .auto-clear .col-s-6:nth-child(odd){clear:left;}    
+  .auto-clear .col-s-6:nth-child(odd){clear:left;}
 }
 
 .clearfix {

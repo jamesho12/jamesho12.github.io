@@ -1,18 +1,8 @@
-$('.bg-photo').click(function(e){
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    if (e.target === this) {
-      $(".dropdown-content").css("display", "none");
-    } 
-  }
-});
+// This is a quickfix for the dropdown menu for mobile devices,
+// in particular for Safari because of how the browser processes
+// hover. Allows the rest of the screen to be clicked and thus hiding
+// the dropdown content.
 
-$('.dropdown').click(function(e){
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    if($(this).find('.dropdown-content').css("display") == "block"){
-      $(this).find('.dropdown-content').css("display", "none");  
-    } else {
-      $('.dropdown-content').css("display", "none");
-      $(this).find('.dropdown-content').css("display", "block");  
-    }
-  }
-});
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  $('.bg-photo, .logo-container, .logo, footer').click(function(e){});
+}

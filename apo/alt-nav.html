@@ -1,9 +1,8 @@
-
-<div class="nav-header">
+<div class="nav-container">
   <img class="logo" src="../images/white-logo.png" alt="Logo Icon">
 
   <div class="menu-wrapper">
-    <div class="menu">
+    <div id="menu" class="menu">
       <div class="menu-icon"></div>
       <div class="menu-icon"></div>
       <div class="menu-icon"></div>
@@ -13,31 +12,36 @@
 
 <div class="menu-items">
   <ul>
-    <li><a href="#">Home</a></li>
-    <li id="about" class="dropdown">
-      <a href="#">About Us</a>
-    </li>
-    <ul id="about-dropdown" class="dropdown-content">
-      <li><a href="../about/who-are-we.html">Who Are We?</a></li>
-      <li><a href="../about/chapter-history.html">Chapter History</a></li>
-      <li><a href="../about/leadership.html">Leadership</a></li>
-      <li><a href="../about/partnership.html">Partnership</a></li>
-      <li><a href="../about/links.html">Links</a></li>
-    </ul>
+    <li><a href="../index.html">Home</a></li>
     <li class="dropdown">
-      <a href="#">Members</a>
+      <a href="javascript:void(0);">About</a>
+      <div class="dropdown-content">
+        <a href="../about/who-are-we.html">Who Are We?</a>
+        <a href="../about/chapter-history.html">Chapter History</a>
+        <a href="../about/leadership.html">Leadership</a>
+        <a href="../about/partnership.html">Partnership</a>
+        <a href="../about/links.html">Links</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0);">Members</a>
       <div class="dropdown-content">
         <a href="../members/pledge-archive.html">Pledge Archive</a>
         <a href="../members/previous-exec.html">Previous Exec Board</a>
       </div>
     </li>
     <li class="dropdown">
-      <a href="#">Join Us</a>
+      <a href="javascript:void(0);">Join</a>
       <div class="dropdown-content">
         <a href="../../tribute/apo.html" target="_blank">The process</a>
         <a href="../join/rush-week.html">Rush Week</a>
       </div>
     </li>
-    <li><a href="#contact-us">Contact Us</a></li>
+    <li><a href="#contact-us">Contact</a></li>
   </ul>
 </div>
+
+<script>
+  var url = "../scripts/about.js";
+  $.getScript(url);
+</script>

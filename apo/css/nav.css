@@ -1,0 +1,164 @@
+body {
+   margin: 0;
+   padding: 0;
+   background: #dedede;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  font-weight: 300;
+  z-index: 100;
+}
+
+.nav-header {
+  padding: 10px 5px;
+  height: inherit;
+  background: #243E90;
+}
+
+@media all and (min-width:1200px) {
+  .nav-header { padding: 10px 20%; }
+}
+
+@media all and (min-width:992px) and (max-width:1199px) {
+  .nav-header { padding: 10px 15%; }
+}
+
+@media all and (min-width:768px) and (max-width:991px) {
+  .nav-header { padding: 10px 10%; }
+}
+
+.logo {
+  float: left;
+  height: 60px;
+}
+
+.menu-wrapper {
+  float: right;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+}
+
+.menu {
+  width: 50px;
+  height: 50px;
+  padding: 0 8px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.menu-icon {
+  width: 32px;
+  height: 2px;
+  margin: 10.5px 0;
+  background-color: white;
+}
+
+.menu-items {
+  display: block;
+  clear: both;
+}
+
+.menu-items ul li {
+  background: #3251B3;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  display: block;
+  padding: 10px 0;
+  font-size: 1em;
+  border-bottom: 1px solid white;
+}
+
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  nav ul li { font-size: 1.8em; }
+}
+
+@media all and (min-width: 1200px) {
+  nav ul li { font-size: 1.5em; }
+}
+
+nav a, .dropdown-content a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 15px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 rgba(255,255,255,.25);
+  color: #fff;
+  z-index: 100;
+}
+
+.dropdown-content {
+  display: none;
+  z-index: 100;
+}
+
+.dropdown-content > li {
+  background: #5573D6 !important;
+}
+
+.dropdown-content a {
+  display: block;
+  text-align: center;
+}
+
+.disabled {
+  display: none;
+}
+
+.dropdown:hover~.dropdown-content {
+  display: block;
+}
+
+
+@media all and (max-device-width:767px) {
+  nav ul li { font-size: 1em; }
+  nav a { padding: 10px 5px; }
+  .dropdown-content { padding: 5px; }
+}
+
+@media all and (max-device-width:767px) and (orientation: landscape) {
+  nav ul li { font-size: 1.5em; }
+}
+
+section {
+  padding-bottom: 25px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px 0;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  background: #243E90;
+}
+
+a {
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+@media all and (min-width:768px) {
+  a {
+    margin-right: 25px;
+  }
+}

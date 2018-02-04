@@ -142,15 +142,6 @@ nav a, .dropdown-content a {
   display: block;
 }
 
-@media all and (max-device-width:767px) {
-  nav ul li { font-size: 1em; }
-  nav a { padding: 10px 5px; }
-}
-
-@media all and (max-device-width:767px) and (orientation: landscape) {
-  nav ul li { font-size: 1.5em; }
-}
-
 section {
   padding-bottom: 25px;
 }
@@ -173,12 +164,8 @@ a {
 }
 
 @media all and (min-width:768px) {
-  a {
-    margin-right: 25px;
-  }
+  a { margin-right: 25px; }
 }
-
-
 
 @media all and (min-width: 768px) {
   nav {
@@ -251,5 +238,11 @@ a {
 
   .dropdown-content:hover {
     display: block;
+  }
+}
+
+@media all and (min-width:768px) and (max-width:1199px) {
+  nav a, .dropdown-content a {
+    font-size: 1.2em;
   }
 }

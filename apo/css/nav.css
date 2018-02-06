@@ -83,22 +83,13 @@ nav ul {
 
 nav ul li {
   display: block;
-  font-size: 1em;
   border-bottom: 1px solid white;
 }
 
 nav ul li:last-child {
   border-bottom: none;
 }
-/*
-@media all and (min-width: 992px) and (max-width: 1199px) {
-  nav ul li { font-size: 1.8em; }
-}
 
-@media all and (min-width: 1200px) {
-  nav ul li { font-size: 1.5em; }
-}
-*/
 nav a, .dropdown-content a {
   display: flex;
   align-items: center;
@@ -109,6 +100,7 @@ nav a, .dropdown-content a {
   text-transform: uppercase;
   text-decoration: none;
   text-shadow: 1px 1px 0 rgba(255,255,255,.25);
+  font-size: 1.3em;
   color: #fff;
   z-index: 100;
 }
@@ -119,12 +111,11 @@ nav a, .dropdown-content a {
 }
 
 .dropdown-content > li {
-
   border-top: 1px solid white;
 }
 
 .dropdown-content a {
-  display: block;
+
   text-align: center;
   background: #5573D6;
   border-top: 1px solid white;
@@ -163,6 +154,13 @@ a {
   text-decoration: none;
 }
 
+@media all and (max-device-width:767px) {
+  nav a, .dropdown-content a {
+    line-height: 25px;
+    font-size: 1.2em;
+  }
+}
+
 @media all and (min-width:768px) {
   a { margin-right: 25px; }
 }
@@ -199,6 +197,7 @@ a {
   nav a, .dropdown-content a {
     padding: 15px 10px;
     line-height: 50px;
+    font-size: 1em;
   }
 
   .dropdown-content a {
@@ -223,6 +222,7 @@ a {
   }
 
   .dropdown-content a {
+    display: block;
     text-align: left;
     background: inherit;
     border-top: none;

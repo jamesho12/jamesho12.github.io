@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  /*border: 1px solid red;*/
 }
 
 [class*="col-"] {
@@ -18,7 +17,6 @@
 @media all and (min-width: 1200px) {
   body{
     font-size: 18px;
-    /*background-color:lightgreen;*/
   }
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
@@ -42,7 +40,6 @@
 @media all and (max-width: 1199px) and (min-width: 992px) {
   body{
     font-size: 16px;
-    /*background-color:lightyellow;*/
   }
   .col-m-1 {width: 8.33%;}
   .col-m-2 {width: 16.66%;}
@@ -66,7 +63,6 @@
 @media all and (max-width: 991px) and (min-width: 0px) {
   body{
     font-size: 12px;
-    /*background-color:lightblue; */
   }
   .hide-s {display:none;}
   .col-s-1 {width: 8.33%;}

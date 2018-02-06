@@ -172,3 +172,7 @@ p {
   .container { padding: 15px 20%; }
   p { font-size: 1.2em; }
 }
+
+.temp-content {
+  height: 62vh;
+}

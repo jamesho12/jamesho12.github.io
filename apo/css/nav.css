@@ -148,7 +148,7 @@ footer {
   background: #243E90;
 }
 
-a {
+footer a {
   margin-right: 15px;
   color: white;
   text-decoration: none;
@@ -162,7 +162,7 @@ a {
 }
 
 @media all and (min-width:768px) {
-  a { margin-right: 25px; }
+  footer a { margin-right: 25px; }
 }
 
 @media all and (min-width: 768px) {

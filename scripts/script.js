@@ -1,4 +1,13 @@
-//$(document).ready(function() {
+$(document).ready(function() {
+  $(document).scroll(function() {
+    if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) && window.screen.width > 767) {
+      if($(document).scrollTop() >= 1)
+        $("nav").removeClass("transparent");
+      else
+        $("nav").addClass("transparent");
+    }
+  });
+
   $(".menu").click(function() {
     $(".menu-items").slideToggle(400, function() {
       $(".menu-items").toggleClass("nav-expanded").css("display","");
@@ -91,4 +100,4 @@
       alert("Please Fill All Required Field");
     }
   });
-//});
+});

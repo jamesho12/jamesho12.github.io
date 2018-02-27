@@ -18,6 +18,13 @@ nav {
   clear: both;
 }
 
+@media all and (min-width: 768px) {
+  .transparent {
+    background: transparent !important;
+    border-bottom: 1px solid white !important;
+  }
+}
+
 .nav-container a {
   text-decoration: none;
   color: white;
